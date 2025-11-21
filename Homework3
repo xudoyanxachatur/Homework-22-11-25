@@ -1,0 +1,46 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Xndirner
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Rectangle rect;
+            rect.Width = 5;
+            rect.Height = 10;
+            Console.WriteLine("Rectangle area: " + rect.GetArea());
+
+            Triangle tri;
+            tri.Base = 5;
+            tri.Height = 10;
+            Console.WriteLine("Triangle area: " + tri.GetArea());
+
+
+
+        }
+
+        public struct Rectangle
+        {
+            public double Width;
+            public double Height;
+            public double GetArea() => Width * Height;
+
+        }
+        public struct Triangle
+        {
+            public double Base;
+            public double Height;
+            public double GetArea() => 0.5 * Base * Height;
+
+        }
+    }
+
+
+}
+
+
